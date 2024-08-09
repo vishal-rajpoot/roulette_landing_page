@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo1.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winexchange</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const words = document.querySelectorAll('.word');
+        let delay = 0;
+    
+        words.forEach((word) => {
+          setTimeout(() => {
+            word.style.opacity = 1;
+            word.style.animation = `fadeIn 0.5s forwards`;
+          }, delay);
+          delay += 500; // Adjust delay to control the speed of the typing effect
+        });
+      });
+    </script>
+    
+  </body>
+</html>
