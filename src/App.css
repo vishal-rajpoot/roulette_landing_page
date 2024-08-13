@@ -16,6 +16,23 @@
   border-radius: 50%;
 }
 
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 155px;
+  height: 155px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(10px); /* Slight blur */
+  backdrop-filter: blur(10px) brightness(1.2); /* Frosted glass effect */
+  z-index: 0;
+  border: 2px solid snow; /* White border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+
 .my-custom-container {
   display: flex;
   align-items: center;
@@ -52,6 +69,12 @@
   transform: translateX(-50%);
   margin-top: 11rem;
 }
+
+.swal-border {
+  border: 1px solid white;
+  border-radius: 10px; 
+}
+
 
 
 @keyframes ballSpin {
@@ -157,6 +180,12 @@
   .outer-cont {
     top: 0.5rem;
     margin-top: 7.5rem;
+  }
+  .circle {
+    top: 32%;
+    left: 50%;
+    width: 95px;
+    height: 95px;
   }
   
   @keyframes ballSpin {

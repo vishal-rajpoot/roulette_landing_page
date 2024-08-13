@@ -95,7 +95,8 @@ const Roulette = () => {
                 border-radius: 10px; 
                 backdrop-filter: blur(10px); 
                 padding: 20px; 
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border: 1px solid white;">
                 <p style="color: #0d76ad;">Cheers !</p>
                 <h2 style="color: #fff;">In the spotlight of Victory</h2>
                 <h3 style="color: #0d76ad;">Ensure your initial deposit of upto ₹1,05,000</h3>
@@ -105,6 +106,9 @@ const Roulette = () => {
         confirmButtonColor: "#0d76ad",
         confirmButtonText: "GET MY PRIZES",
         allowOutsideClick: false,
+        customClass: {
+        popup: 'swal-border' // Adding custom class
+      }
       }).then((result) => {
         if (result.isConfirmed) {
           setSpins(0);
@@ -127,6 +131,7 @@ const Roulette = () => {
           style={{ width: "100%", height: "100%" }}
         />
       </div>
+      <div className="circle"></div>
       <button onClick={handleSpin} className="btn">
         Play Now
       </button>
