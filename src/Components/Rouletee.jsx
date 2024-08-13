@@ -130,10 +130,11 @@ const Roulette = () => {
           alt="wheel"
           style={{ width: "100%", height: "100%" }}
         />
-      </div>
       <div className="circle"></div>
+
+      </div>
       <button onClick={handleSpin} className="btn">
-        Play Now
+        PLAY NOW
       </button>
       <div className="outer-cont">
         <div className="ball"></div>
